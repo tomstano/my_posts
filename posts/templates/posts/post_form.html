@@ -1,0 +1,22 @@
+{% block form %}
+{% load static %}
+<link href="{% static 'posts/css/sidebar.css' %}" rel="stylesheet">
+
+<div class="col-md-4 float-right ">
+<div class="card my-4">
+        <h5 class="card-header">Add new post</h5>
+    <div class="card-body">
+        {% if user.is_authenticated %}
+            <form method="POST" class="post-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-danger">Save</button>
+        {% else %}
+            You are not logged in!
+        {% endif %}
+        </form>
+    </div>
+</div>
+</div>
+
+{% endblock form %}

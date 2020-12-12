@@ -1,0 +1,18 @@
+{% block sidebar %}
+{% load static %}
+<link href="{% static 'posts/css/sidebar.css' %}" rel="stylesheet">
+
+<!-- Sidebar Widgets Column -->
+<div class="col-md-4 float-right ">
+<div class="card my-4">
+        <h5 class="card-header">About Me</h5>
+    <div class="card-body">
+        <p class="card-text"> Hi, my name is Tomek - I'm learning Django as part of the Kodilla course. </p>
+        <img src="{% static 'posts/images/tsta.jpg' %}" alt="My image">
+        <a href="/me"
+           class="btn btn-danger">Know more!</a>
+    </div>
+</div>
+</div>
+
+{% endblock sidebar %}
